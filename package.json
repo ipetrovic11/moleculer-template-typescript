@@ -1,20 +1,20 @@
 {
-  "name": "moleculer-template-project-typescript",
+  "name": "moleculer-template-typescript",
   "version": "1.0.0",
-  "description": "Project template for Moleculer-based projects with typescript",
+  "description": "Project template for Moleculer-based projects with typescript and json-schema transformer",
   "main": "meta.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moleculerjs/moleculer-template-project-typescript.git"
+    "url": "git+https://github.com/ipetrovic11/moleculer-template-typescript"
   },
   "keywords": [],
   "author": "MoleculerJS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/moleculerjs/moleculer-template-project-typescript/issues"
+    "url": "https://github.com/ipetrovic11/moleculer-template-typescript/issues"
   },
-  "homepage": "https://github.com/moleculerjs/moleculer-template-project-typescript#readme"
+  "homepage": "https://github.com/ipetrovic11/moleculer-template-typescript#readme"
 }
