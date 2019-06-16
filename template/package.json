@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "My Moleculer microservices project",
   "scripts": {
-    "build": "tsc",
-    "dev": "ts-node ./node_modules/moleculer/bin/moleculer-runner.js --hot --repl --config moleculer.config.ts services/**/*.service.ts",
+    "build": "ttsc",
+    "dev": "ts-node --compiler ttypescript ./node_modules/moleculer/bin/moleculer-runner.js --hot --repl --config moleculer.config.ts services/**/*.service.ts",
     "cli":"moleculer connect {{transporter}}",
     "start": "moleculer-runner services"{{#jest}},
     "ci": "jest --watch",
@@ -32,6 +32,8 @@
     {{/jest}}
     "moleculer-repl": "^0.5.3",
     "ts-node": "^7.0.1",
+    "ts-transformer-json-schema": "^0.4.0",
+    "ttypescript": "^1.5.7",
     "typescript": "^3.2.2"
   },
   "dependencies": {
@@ -77,6 +79,7 @@
     ],
     "globals": {
       "ts-jest": {
+        "compiler": "ttypescript",
         "tsConfig": "tsconfig.json"
       }
     }

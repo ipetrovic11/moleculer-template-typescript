@@ -1,5 +1,10 @@
 "use strict";
-import { ServiceSchema } from "moleculer";
+import { Context, ServiceSchema } from "moleculer";
+import { schema } from "ts-transformer-json-schema";
+
+interface IUser {
+	name: string;
+}
 
 const GreeterService: ServiceSchema = {
 	name: "greeter",
@@ -26,7 +31,7 @@ const GreeterService: ServiceSchema = {
 		 *
 		 * @returns
 		 */
-		hello() {
+		hello(ctx) {
 			return "Hello Moleculer";
 		},
 
@@ -36,11 +41,9 @@ const GreeterService: ServiceSchema = {
 		 * @param {String} name - User name
 		 */
 		welcome: {
-			params: {
-				name: "string",
-			},
-			handler(ctx) {
-				return `Welcome, ${ctx.params.name}`;
+			params: schema<IUser>(),
+			handler({ params: user }: Context<IUser>) {
+				return `Welcome, ${user.name}`;
 			},
 		},
 	},
@@ -62,9 +65,9 @@ const GreeterService: ServiceSchema = {
 	/**
 	 * Service created lifecycle event handler
 	 */
-	created() {
+	// created() {
 
-	},
+	// },
 
 	/**
 	 * Service started lifecycle event handler

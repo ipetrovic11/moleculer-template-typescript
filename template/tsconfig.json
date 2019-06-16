@@ -13,7 +13,10 @@
     ],
     "sourceMap": true,
     "target": "es6",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "plugins": [
+      { "transform": "ts-transformer-json-schema/transformer" }
+    ]
   },
   "exclude": [
     "node_modules",
